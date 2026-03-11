@@ -1,0 +1,124 @@
+.adminContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 2rem;
+}
+
+.adminCard {
+  background-color: var(--bg-color);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(109, 75, 255, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.adminCard h2 {
+  font-family: var(--font-display);
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.loginForm, .uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputField {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(109, 75, 255, 0.3);
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.fileDropArea {
+  position: relative;
+  border: 2px dashed rgba(109, 75, 255, 0.4);
+  border-radius: 8px;
+  padding: 3rem 1rem;
+  background-color: rgba(109, 75, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.fileDropArea:hover {
+  background-color: rgba(109, 75, 255, 0.06);
+  border-color: var(--primary);
+}
+
+.fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.selectedFile {
+  color: var(--primary);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.errorText {
+  color: #ef4444;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.successText {
+  color: #10b981;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--primary);
+}

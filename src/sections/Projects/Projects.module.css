@@ -1,0 +1,106 @@
+.projectsSection {
+  padding: 100px 0;
+  background-color: var(--bg-color);
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.icon {
+  color: var(--warm-amber);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(245, 158, 11, 0.2);
+  margin-left: 1rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+  position: relative;
+  top: 0;
+}
+
+.projectCard:hover {
+  top: -10px;
+  box-shadow: 0 20px 30px -15px rgba(109, 75, 255, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.folderIcon {
+  color: var(--primary);
+}
+
+.externalLink {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.externalLink:hover {
+  color: var(--accent);
+}
+
+.projectTitle {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.projectDescription {
+  flex-grow: 1;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
