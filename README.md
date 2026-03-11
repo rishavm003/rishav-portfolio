@@ -9,11 +9,20 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ## 📸 Screenshots
 
-![Home Section](./public/screenshots/home.png)
+![Home Section](ScreenShots/Home_page.png)
 *Hero — "I build Intelligent Software."*
 
-![About Section](./public/screenshots/about.png)
+![About Section](ScreenShots/About_page.png)
 *About Me — AI Engineer with a passion for building real systems*
+
+ ![Skills](ScreenShots/Skill_page.png) 
+
+![Experience](ScreenShots/Experience_page.png) 
+
+
+ ![Contact](ScreenShots/Get_in_touch_page.png) 
+ 📬 **Contact** — Open to full-time & internship roles in AI/ML 
+
 
 ---
 
