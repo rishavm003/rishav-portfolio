@@ -24,7 +24,7 @@
 }
 
 .icon {
-  color: var(--warm-amber);
+  color: var(--accent);
 }
 
 .title {
@@ -35,72 +35,93 @@
 .line {
   flex-grow: 1;
   height: 1px;
-  background-color: rgba(245, 158, 11, 0.2);
+  background-color: rgba(244, 63, 94, 0.2);
   margin-left: 1rem;
 }
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .projectCard {
   background-color: white;
-  border-radius: 8px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 2.5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  transition: var(--transition-smooth);
-  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(109, 75, 255, 0.1);
   position: relative;
-  top: 0;
 }
 
 .projectCard:hover {
-  top: -10px;
-  box-shadow: 0 20px 30px -15px rgba(109, 75, 255, 0.15);
-}
-
-.cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.folderIcon {
-  color: var(--primary);
-}
-
-.externalLink {
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-}
-
-.externalLink:hover {
-  color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(109, 75, 255, 0.15);
 }
 
 .projectTitle {
-  font-size: 1.4rem;
-  color: var(--secondary);
+  font-size: 1.25rem;
+  color: var(--text-dark);
   margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .projectDescription {
   flex-grow: 1;
   color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.techList {
+.tagsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  font-family: var(--font-mono);
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.tagPill {
+  background-color: rgba(109, 75, 255, 0.08); /* Light purple var(--accent) approx */
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
   font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.githubLink {
   color: var(--text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubLink:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
 }

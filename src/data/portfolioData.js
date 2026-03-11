@@ -39,22 +39,46 @@ export const portfolioData = {
   },
   projects: [
     {
-      title: "IntelliDoc Analyzer",
-      description: "An AI-powered document analysis tool that extracts key information and sentiment from large text corpora.",
-      tags: ["Python", "NLP", "React", "FastAPI"],
-      link: "#"
+      title: "Real-Time AI Meeting Intelligence System",
+      description: "A real-time meeting assistant that transcribes, summarizes, and extracts action items from live meetings using AI and NLP pipelines.",
+      tags: ["AI", "NLP", "Python", "LLM"],
+      github: "https://github.com/rishavm003/Real-Time-AI-Meeting-Intelligence-System"
     },
     {
-      title: "Predictive Sales Model",
-      description: "Machine learning model predicting quarterly sales trends with 92% accuracy, integrated into a dashboard.",
-      tags: ["Scikit-Learn", "Pandas", "Streamlit", "PostgreSQL"],
-      link: "#"
+      title: "Medical Image Analysis — Brain Tumor Detection",
+      description: "Deep learning model to detect brain tumors from MRI scans using convolutional neural networks with high accuracy.",
+      tags: ["Deep Learning", "PyTorch", "Computer Vision", "Healthcare"],
+      github: "https://github.com/rishavm003/Medical-Image-Analysis"
     },
     {
-      title: "Automated Data Pipeline",
-      description: "A robust ETL pipeline processing 1M+ records daily, optimizing data availability for analytics teams.",
-      tags: ["Apache Airflow", "AWS S3", "Docker", "Python"],
-      link: "#"
+      title: "AI Room Design Assistant",
+      description: "An intelligent interior design tool that generates room layout suggestions and design ideas based on user preferences.",
+      tags: ["AI", "JavaScript", "UI/UX"],
+      github: "https://github.com/rishavm003/AI-Room-Design"
+    },
+    {
+      title: "Blinkit Sales Analysis Dashboard",
+      description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance, item categories, outlet types and key business metrics.",
+      tags: ["Power BI", "Data Analytics", "Business Intelligence"],
+      github: "https://github.com/rishavm003/Blinkit-Sales-Analysis"
+    },
+    {
+      title: "Credit Card Financial Dashboard",
+      description: "Interactive Power BI dashboard tracking credit card transactions, customer behavior and financial KPIs for business decision-making.",
+      tags: ["Power BI", "Finance", "SQL"],
+      github: "https://github.com/rishavm003/Credit_Card_Financial-Dashboard."
+    },
+    {
+      title: "Marketing Campaign Performance Analysis",
+      description: "Data analysis project tracking KPIs across marketing campaigns to identify top-performing strategies and optimize future campaigns.",
+      tags: ["Python", "Data Analysis", "Pandas"],
+      github: "https://github.com/rishavm003/Marketing_Campaign_Performance_Analysis"
+    },
+    {
+      title: "T20 World Cup Cricket Analytics",
+      description: "End-to-end cricket data analytics project analyzing T20 World Cup performance metrics, player stats and match outcomes.",
+      tags: ["Python", "Sports Analytics", "Power BI"],
+      github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-"
     }
   ],
   experience: [
