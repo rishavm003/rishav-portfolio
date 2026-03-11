@@ -7,6 +7,16 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ---
 
+## 📸 Screenshots
+
+![Home Section](./public/screenshots/home.png)
+*Hero — "I build Intelligent Software."*
+
+![About Section](./public/screenshots/about.png)
+*About Me — AI Engineer with a passion for building real systems*
+
+---
+
 ## ✨ Features
 
 - 🎨 Clean and modern UI with smooth animations
@@ -101,7 +111,7 @@ This project is deployed on **Vercel**. Any push to the `main` branch triggers a
 
 ## 📬 Contact
 
-**Rishav Mishra**
+**Rishav Mishra** — AI Engineer | B.Tech CSE (AI), BBD University, Lucknow
 
 - 🌐 Portfolio: [rishav-mishra-portfolio.vercel.app](https://rishav-mishra-portfolio.vercel.app/)
 - 💼 GitHub: [@rishavm003](https://github.com/rishavm003)
