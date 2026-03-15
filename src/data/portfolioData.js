@@ -39,46 +39,53 @@ export const portfolioData = {
   },
   projects: [
     {
-      title: "Real-Time AI Meeting Intelligence System",
-      description: "A real-time meeting assistant that transcribes, summarizes, and extracts action items from live meetings using AI and NLP pipelines.",
-      tags: ["AI", "NLP", "Python", "LLM"],
-      github: "https://github.com/rishavm003/Real-Time-AI-Meeting-Intelligence-System"
+      title: "NeuroScan Aid — Brain Tumor Detection",
+      description: "Deep learning system for medical image analysis that detects and classifies brain tumors from MRI scans. Built using CNNs and advanced image processing techniques, achieving high accuracy to assist radiologists in faster and more reliable diagnosis.",
+      tags: ["Deep Learning", "CNN", "Medical AI", "Python"],
+      github: "https://github.com/rishavm003",
+      accent: "#9d6fff",
+      icon: "brain",
+      featured: true
     },
     {
-      title: "Medical Image Analysis — Brain Tumor Detection",
-      description: "Deep learning model to detect brain tumors from MRI scans using convolutional neural networks with high accuracy.",
-      tags: ["Deep Learning", "PyTorch", "Computer Vision", "Healthcare"],
-      github: "https://github.com/rishavm003/Medical-Image-Analysis"
+      title: "AI-Powered Healthcare Triage System",
+      description: "Intelligent triage system that uses AI to assess patient symptoms, prioritize cases by urgency, and recommend appropriate care pathways. Reduces wait times and improves hospital resource allocation.",
+      tags: ["AI", "Healthcare", "NLP", "Python"],
+      github: "https://github.com/rishavm003",
+      accent: "#00d4ff",
+      icon: "health"
+    },
+    {
+      title: "Autonomous Trading Bot",
+      description: "AI-powered algorithmic trading bot that analyzes market data in real time, identifies patterns, and executes trades autonomously. Uses machine learning models for price prediction and risk management.",
+      tags: ["AI", "ML", "Finance", "Python"],
+      github: "https://github.com/rishavm003",
+      accent: "#00ff88",
+      icon: "trading"
     },
     {
       title: "AI Room Design Assistant",
-      description: "An intelligent interior design tool that generates room layout suggestions and design ideas based on user preferences.",
-      tags: ["AI", "JavaScript", "UI/UX"],
-      github: "https://github.com/rishavm003/AI-Room-Design"
+      description: "Generative AI application that creates personalized interior room layouts based on user preferences. Users input their style, budget, and room dimensions — the AI generates design recommendations and furniture arrangements.",
+      tags: ["Generative AI", "UX", "HTML", "CSS"],
+      github: "https://github.com/rishavm003",
+      accent: "#ff4d8d",
+      icon: "room"
+    },
+    {
+      title: "Real-Time AI Meeting Intelligence System",
+      description: "AI system that joins meetings, transcribes conversations in real time, extracts action items, summarizes key decisions, and generates follow-up reports automatically. Built for productivity and team alignment.",
+      tags: ["NLP", "Real-Time AI", "Automation", "Python"],
+      github: "https://github.com/rishavm003",
+      accent: "#fbbf24",
+      icon: "meeting"
     },
     {
       title: "Blinkit Sales Analysis Dashboard",
-      description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance, item categories, outlet types and key business metrics.",
-      tags: ["Power BI", "Data Analytics", "Business Intelligence"],
-      github: "https://github.com/rishavm003/Blinkit-Sales-Analysis"
-    },
-    {
-      title: "Credit Card Financial Dashboard",
-      description: "Interactive Power BI dashboard tracking credit card transactions, customer behavior and financial KPIs for business decision-making.",
-      tags: ["Power BI", "Finance", "SQL"],
-      github: "https://github.com/rishavm003/Credit_Card_Financial-Dashboard."
-    },
-    {
-      title: "Marketing Campaign Performance Analysis",
-      description: "Data analysis project tracking KPIs across marketing campaigns to identify top-performing strategies and optimize future campaigns.",
-      tags: ["Python", "Data Analysis", "Pandas"],
-      github: "https://github.com/rishavm003/Marketing_Campaign_Performance_Analysis"
-    },
-    {
-      title: "T20 World Cup Cricket Analytics",
-      description: "End-to-end cricket data analytics project analyzing T20 World Cup performance metrics, player stats and match outcomes.",
-      tags: ["Python", "Sports Analytics", "Power BI"],
-      github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-"
+      description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance, item categories, outlet types, and key business metrics. Provides actionable insights for business decision-making.",
+      tags: ["Power BI", "Data Analytics", "Dashboard"],
+      github: "https://github.com/rishavm003",
+      accent: "#6366f1",
+      icon: "dashboard"
     }
   ],
   experience: [

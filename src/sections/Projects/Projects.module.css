@@ -1,3 +1,4 @@
+/* ── Section wrapper ────────────────────────────────────────── */
 .projectsSection {
   padding: 100px 0;
   background-color: var(--bg-color);
@@ -7,7 +8,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -16,6 +17,7 @@
   transform: translateY(0);
 }
 
+/* ── Section header ─────────────────────────────────────────── */
 .header {
   display: flex;
   align-items: center;
@@ -30,6 +32,7 @@
 .title {
   font-size: 2.5rem;
   color: var(--text-dark);
+  white-space: nowrap;
 }
 
 .line {
@@ -39,10 +42,12 @@
   margin-left: 1rem;
 }
 
+/* ── Grid (regular cards) ───────────────────────────────────── */
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 900px) {
@@ -51,77 +56,194 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 580px) {
   .projectsGrid {
     grid-template-columns: 1fr;
   }
 }
 
+/* ── Shared card base ───────────────────────────────────────── */
 .projectCard {
-  background-color: white;
-  border-radius: 12px;
-  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(109, 75, 255, 0.1);
-  position: relative;
+  gap: 1rem;
+  overflow: hidden;
+  /* floating animation */
+  animation: floatCard 6s ease-in-out infinite;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+
+/* stagger float per card using nth-child */
+.projectsGrid > *:nth-child(1) { animation-delay: 0s; }
+.projectsGrid > *:nth-child(2) { animation-delay: 0.9s; }
+.projectsGrid > *:nth-child(3) { animation-delay: 1.8s; }
+.projectsGrid > *:nth-child(4) { animation-delay: 0.45s; }
+.projectsGrid > *:nth-child(5) { animation-delay: 1.35s; }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
 }
 
 .projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(109, 75, 255, 0.15);
+  animation-play-state: paused;
+  transform: translateY(-10px) scale(1.01);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.1),
+    0 0 0 1px var(--card-accent, rgba(109, 75, 255, 0.3)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-.projectTitle {
-  font-size: 1.25rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  font-weight: 700;
-  line-height: 1.4;
+/* glowing accent blob behind the card */
+.cardGlow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--card-accent, #9d6fff);
+  opacity: 0.08;
+  filter: blur(40px);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.projectDescription {
-  flex-grow: 1;
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+.projectCard:hover .cardGlow {
+  opacity: 0.18;
 }
 
-.tagsContainer {
+/* ── Featured card overrides ─────────────────────────────────── */
+.featuredCard {
+  grid-column: 1 / -1; /* would span all in a grid — but we render it outside the grid */
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 1.5rem;
+  animation-duration: 8s;
+  border-width: 1.5px;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.featuredCard .cardGlow {
+  width: 260px;
+  height: 260px;
+  opacity: 0.12;
+}
+
+.featuredCard .iconWrap {
+  flex-shrink: 0;
+}
+
+.featuredCard .iconWrap svg {
+  width: 72px;
+  height: 72px;
+}
+
+@media (max-width: 700px) {
+  .featuredCard {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+/* ── Card internals ─────────────────────────────────────────── */
+.cardTopRow {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.tagPill {
-  background-color: rgba(109, 75, 255, 0.08); /* Light purple var(--accent) approx */
-  color: var(--accent);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-family: var(--font-mono);
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: auto;
-}
-
-.githubLink {
-  color: var(--text-muted);
-  transition: color 0.2s ease, transform 0.2s ease;
+.iconWrap {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.githubLink:hover {
-  color: var(--accent);
+.featuredBadge {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.projectTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.featuredCard .projectTitle {
+  font-size: 1.6rem;
+}
+
+.projectDescription {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* ── Tags ───────────────────────────────────────────────────── */
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagPill {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid;
+  letter-spacing: 0.03em;
+}
+
+/* ── Footer / GitHub button ─────────────────────────────────── */
+.cardFooter {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.githubBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--btn-color, var(--primary));
+  border: 1px solid var(--btn-color, var(--primary));
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.githubBtn:hover {
+  background: var(--btn-color, var(--primary));
+  color: #fff;
   transform: translateY(-2px);
 }
