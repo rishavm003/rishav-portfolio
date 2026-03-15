@@ -39,53 +39,124 @@ export const portfolioData = {
   },
   projects: [
     {
-      title: "NeuroScan Aid — Brain Tumor Detection",
-      description: "Deep learning system for medical image analysis that detects and classifies brain tumors from MRI scans. Built using CNNs and advanced image processing techniques, achieving high accuracy to assist radiologists in faster and more reliable diagnosis.",
-      tags: ["Deep Learning", "CNN", "Medical AI", "Python"],
-      github: "https://github.com/rishavm003",
-      accent: "#9d6fff",
-      icon: "brain",
-      featured: true
+      title: "Mental Health Chatbot",
+      description: "Empathetic conversational AI that detects signs of stress, anxiety, and depression from user text. Provides supportive responses, coping strategies, and recommends professional resources when needed.",
+      tags: ["NLP", "LLM", "Healthcare", "Chatbot"],
+      github: "https://github.com/rishavm003/Mental-Health-Chatbot",
+      accent: "#6366f1",
+      icon: "chatbot",
+      floatDuration: "6.5s",
+      floatDelay: "1.6s"
     },
     {
-      title: "AI-Powered Healthcare Triage System",
-      description: "Intelligent triage system that uses AI to assess patient symptoms, prioritize cases by urgency, and recommend appropriate care pathways. Reduces wait times and improves hospital resource allocation.",
-      tags: ["AI", "Healthcare", "NLP", "Python"],
-      github: "https://github.com/rishavm003",
+      title: "Real-Time AI Meeting Intelligence System",
+      description: "AI system that transcribes meetings in real time, extracts action items, summarizes key decisions, and generates follow-up reports automatically. Built for productivity and team alignment.",
+      tags: ["NLP", "Real-Time AI", "Automation", "Python"],
+      github: "https://github.com/rishavm003/Real-Time-AI-Meeting-Intelligence-System",
       accent: "#00d4ff",
-      icon: "health"
+      icon: "meeting",
+      floatDuration: "6s",
+      floatDelay: "3s"
     },
     {
       title: "Autonomous Trading Bot",
       description: "AI-powered algorithmic trading bot that analyzes market data in real time, identifies patterns, and executes trades autonomously. Uses machine learning models for price prediction and risk management.",
       tags: ["AI", "ML", "Finance", "Python"],
-      github: "https://github.com/rishavm003",
+      github: "https://github.com/rishavm003/Autonomous-Trading-Bot",
       accent: "#00ff88",
-      icon: "trading"
+      icon: "trading",
+      floatDuration: "8s",
+      floatDelay: "1.2s"
+    },
+    {
+      title: "AI-Powered Healthcare Triage System",
+      description: "Intelligent triage system that uses AI to assess patient symptoms, prioritize cases by urgency, and recommend appropriate care pathways. Reduces wait times and improves hospital resource allocation.",
+      tags: ["AI", "Healthcare", "NLP", "Python"],
+      github: "https://github.com/rishavm003/AI-Powered-Healthcare-Triage-System",
+      accent: "#00d4ff",
+      icon: "health",
+      floatDuration: "6s",
+      floatDelay: "0.4s"
+    },
+    {
+      title: "Drug Interaction Checker",
+      description: "AI-powered medical tool where users input multiple medications and instantly receive a safety report on dangerous drug interactions. Uses a medical knowledge base combined with NLP to explain risks in plain language.",
+      tags: ["AI", "NLP", "Healthcare", "Python"],
+      github: "https://github.com/rishavm003/Drug-Interaction-Checker",
+      accent: "#f43f5e",
+      icon: "drug",
+      floatDuration: "9s",
+      floatDelay: "0.2s"
+    },
+    {
+      title: "NeuroScan Aid — Brain Tumor Detection",
+      description: "Deep learning system for medical image analysis that detects and classifies brain tumors from MRI scans. Built using CNNs and advanced image processing techniques, achieving high accuracy to assist radiologists in faster and more reliable diagnosis.",
+      tags: ["Deep Learning", "CNN", "Medical AI", "Python"],
+      github: "https://github.com/rishavm003/Medical-Image-Analysis",
+      accent: "#9d6fff",
+      icon: "brain",
+      floatDuration: "7s",
+      floatDelay: "0s"
+    },
+    {
+      title: "Emotion Detection from Facial Expressions",
+      description: "Real-time emotion recognition system using CNN and OpenCV that detects 7 human emotions from live webcam feed — happy, sad, angry, surprised, fearful, disgusted, and neutral. Highly visual and impressive in live demos.",
+      tags: ["Computer Vision", "CNN", "OpenCV", "Real-Time"],
+      github: "https://github.com/rishavm003/Emotion-Detection-from-Facial-Expressions",
+      accent: "#ff4d8d",
+      icon: "emotion",
+      floatDuration: "5.5s",
+      floatDelay: "0.8s"
+    },
+    {
+      title: "Stock Market Sentiment Analyzer",
+      description: "Scrapes financial news and social media, runs NLP-based sentiment analysis, and correlates public sentiment with real stock price movements. Visualized as an interactive analytics dashboard for investors.",
+      tags: ["NLP", "Sentiment Analysis", "Finance", "Dashboard"],
+      github: "https://github.com/rishavm003/Stock-Market-Sentiment-Analyzer",
+      accent: "#fbbf24",
+      icon: "sentiment",
+      floatDuration: "7.5s",
+      floatDelay: "2s"
     },
     {
       title: "AI Room Design Assistant",
       description: "Generative AI application that creates personalized interior room layouts based on user preferences. Users input their style, budget, and room dimensions — the AI generates design recommendations and furniture arrangements.",
       tags: ["Generative AI", "UX", "HTML", "CSS"],
-      github: "https://github.com/rishavm003",
-      accent: "#ff4d8d",
-      icon: "room"
+      github: "https://github.com/rishavm003/AI-Room-Design",
+      accent: "#9d6fff",
+      icon: "room",
+      floatDuration: "7s",
+      floatDelay: "1s"
     },
     {
-      title: "Real-Time AI Meeting Intelligence System",
-      description: "AI system that joins meetings, transcribes conversations in real time, extracts action items, summarizes key decisions, and generates follow-up reports automatically. Built for productivity and team alignment.",
-      tags: ["NLP", "Real-Time AI", "Automation", "Python"],
-      github: "https://github.com/rishavm003",
-      accent: "#fbbf24",
-      icon: "meeting"
+      title: "Hospital Patient Records Management System",
+      description: "Full-stack system for managing hospital patient records — includes patient registration, medical history tracking, appointment scheduling, and doctor assignment. Built for real-world healthcare workflow efficiency.",
+      tags: ["Full Stack", "Healthcare", "Database", "SQL"],
+      github: "https://github.com/rishavm003/Hospital-Patient-Records-Management-System",
+      accent: "#6366f1",
+      icon: "hospital",
+      floatDuration: "7s",
+      floatDelay: "0.6s"
+    },
+    {
+      title: "T20 World Cup Cricket Analytics",
+      description: "End-to-end data analytics project on T20 World Cup cricket data. Analyzes player performance, team strategies, match outcomes, and batting/bowling statistics using Python and interactive visualizations.",
+      tags: ["Data Analytics", "Python", "Sports Analytics"],
+      github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-",
+      accent: "#00ff88",
+      icon: "cricket",
+      floatDuration: "8.5s",
+      floatDelay: "1.8s"
     },
     {
       title: "Blinkit Sales Analysis Dashboard",
-      description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance, item categories, outlet types, and key business metrics. Provides actionable insights for business decision-making.",
+      description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance across item categories, outlet types, and key business metrics. Provides actionable insights for data-driven business decision-making.",
       tags: ["Power BI", "Data Analytics", "Dashboard"],
-      github: "https://github.com/rishavm003",
-      accent: "#6366f1",
-      icon: "dashboard"
+      github: "https://github.com/rishavm003/Blinkit-Sales-Analysis",
+      accent: "#fbbf24",
+      icon: "dashboard",
+      floatDuration: "5s",
+      floatDelay: "2.5s"
     }
   ],
   experience: [
