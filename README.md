@@ -118,7 +118,7 @@ This project is deployed on **Vercel**. Any push to the `main` branch triggers a
 
 ---
 
-## 📬 Contact
+## 📬 Contact.
 
 **Rishav Mishra** — AI Engineer | B.Tech CSE (AI), BBD University, Lucknow
 
