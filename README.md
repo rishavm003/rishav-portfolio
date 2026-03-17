@@ -5,7 +5,7 @@
 
 A modern, responsive personal portfolio website built with **React** and **Vite**, featuring a dynamic project showcase, contact form, and an admin panel powered by **Supabase**.
 
----
+
 
 ## 📸 Screenshots
 
