@@ -4,7 +4,7 @@ export const portfolioData = {
     role: "AI/ML Engineer & Software Developer",
     tagline: "Bridging the gap between software development, artificial intelligence, and actionable data insights.",
     location: "Lucknow, India",
-    education: "B.Tech in CSE (Specialization in AI), BBD University, Lucknow",
+    education: "B.Tech in Computer Science and Engineering\n(Specialization in AI)\n BBD University, Lucknow",
   },
   about: {
     bio: [

@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <div className={styles.metaItem}>
             <GraduationCap size={18} />
-            <span>{education}</span>
+            <span style={{ whiteSpace: 'pre-line' }}>{education}</span>
           </div>
         </div>
         
