@@ -15,14 +15,15 @@ export const portfolioData = {
   },
   skills: {
     technical: [
-      { category: "Programming Languages", items: "Python, C++, JavaScript, HTML, CSS, SQL" },
-      { category: "Machine Learning", items: "Scikit-learn, YOLO, OpenCV" },
-      { category: "Deep Learning", items: "PyTorch, TensorFlow, Keras, CNNs" },
-      { category: "Artificial Intelligence", items: "NLP, NLTK, SpaCy, Transformers, LLM Integration, RAG (Retrieval-Augmented Generation), Agentic AI Systems" },
+      { category: "Languages", items: "Python, C++" },
+      { category: "AI / ML Frameworks", items: "TensorFlow, PyTorch, Scikit-learn, HuggingFace Transformers, Whisper" },
+      { category: "AI Specializations", items: "Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Agentic AI Systems, NLP (NLTK, SpaCy), Computer Vision (YOLO, CNNs), Sentiment Analysis, Speech Recognition" },
+      { category: "Deep Learning", items: "Convolutional Neural Networks (CNNs), Transformer Architecture, Transfer Learning, Model Fine-tuning" },
+      { category: "Backend & APIs", items: "FastAPI, REST APIs, Streaming Pipelines" },
+      { category: "Frontend", items: "React.js (Dashboard Development)" },
       { category: "Databases", items: "MySQL, MongoDB" },
-      { category: "Cloud & Deployment", items: "AWS, Google Cloud" },
-      { category: "Tools", items: "Git, GitHub, Jupyter Notebook, VS Code, Antigravity" },
-      { category: "Platforms & Analytics", items: "Excel, DAX Studio, Google Colab" }
+      { category: "Cloud Platforms", items: "AWS, Google Cloud" },
+      { category: "MLOps & Tools", items: "Git, GitHub, Jupyter Notebook" }
     ],
     soft: [
       "Communication & Collaboration",
@@ -33,7 +34,7 @@ export const portfolioData = {
     ],
     core: [
       "Data Structures & Algorithms",
-      "Object-Oriented Programming",
+      "Object-Oriented Programming (OOP)",
       "Computer Networks"
     ]
   },
@@ -189,3 +190,60 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/rishav-mishra-rm"
   }
 };
+
+export const certifications = [
+  {
+    id: "01",
+    title: "AI Fluency: Framework & Foundations",
+    platform: "Anthropic Education",
+    date: "March 2026",
+    description: "Core AI concepts, frameworks, and foundational principles of modern artificial intelligence systems.",
+    link: "http://verify.skilljar.com/c/3gfkxuacnvz9",
+    accentColor: "#9d6fff",
+  },
+  {
+    id: "02",
+    title: "Software Engineering Job Simulation",
+    platform: "JPMorgan Chase & Co. — Forage",
+    date: "June 2024",
+    description: "Real-world software engineering tasks — stock data feeds, JPMorgan frameworks, data visualization for traders, and open source contribution.",
+    link: "https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Certificate/Software%20Engineering%20Job%20Simulation.pdf",
+    accentColor: "#00d4ff",
+  },
+  {
+    id: "03",
+    title: "Data Analytics and Visualization Job Simulation",
+    platform: "Accenture — Forage",
+    date: "April 2024",
+    description: "End-to-end data analytics workflow — project understanding, data cleaning, modeling, visualization storytelling, and client presentation.",
+    link: "https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Certificate/Data%20Analytics%20And%20Visualization%20Job%20Simulation.pdf",
+    accentColor: "#00ff88",
+  },
+  {
+    id: "04",
+    title: "Data Science & Analytics",
+    platform: "HP LIFE — HP Foundation",
+    date: "December 2024",
+    description: "Data science practices, methodologies, analytics tools, and data-driven business decision making.",
+    link: "https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Certificate/HP%20Data%20Science%20&%20Analytics.pdf",
+    accentColor: "#fbbf24",
+  },
+  {
+    id: "05",
+    title: "GoFr Summer of Code 2025",
+    platform: "GoFr Open Source Program",
+    date: "August 2025",
+    description: "Open source contribution program focused on engineering excellence and collaborative software development.",
+    link: "https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Certificate/GoFr%20Summer%20Code.jpeg",
+    accentColor: "#ff4d8d",
+  },
+  {
+    id: "06",
+    title: "AI/ML Hackathon 1.0 — Certificate of Appreciation",
+    platform: "myOnsite Healthcare & Parul University",
+    date: "July 2024",
+    description: "Actively participated and made significant contributions at an AI/ML hackathon, recognized for innovative ideas, teamwork, and dedication.",
+    link: "https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Certificate/Parul%20Hackathon%20Certificate.jpg",
+    accentColor: "#6366f1",
+  },
+];

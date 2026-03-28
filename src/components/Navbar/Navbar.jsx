@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
-const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
+const navItems = ['Home', 'About', 'Experience', 'Skills', 'Projects', 'Certifications', 'Contact'];
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState('Home');

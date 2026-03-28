@@ -1,0 +1,196 @@
+/* ── Section ───────────────────────────────────────────────── */
+.projectsSection {
+  padding: 10px 0 120px;
+  background-color: var(--bg-color);
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.headerTextWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon { color: var(--accent); flex-shrink: 0; }
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(244, 63, 94, 0.2);
+  margin-left: 1rem;
+}
+
+/* ── Float animation ─────────────────────────────────────────── */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+
+/* ── Grid ────────────────────────────────────────────────────── */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;           /* prevents tall cards from stretching neighbours */
+}
+
+@media (max-width: 960px) {
+  .projectsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .projectsGrid { grid-template-columns: 1fr; }
+}
+
+/* ── Card ────────────────────────────────────────────────────── */
+.projectCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  overflow: hidden;
+  /* floating — duration & delay come from inline style */
+  animation: floatCard ease-in-out infinite;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1.5px var(--card-accent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* accent glow blob */
+.cardGlow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--card-accent, #9d6fff);
+  opacity: 0.07;
+  filter: blur(45px);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .cardGlow { opacity: 0.2; }
+
+/* ── Card internals ──────────────────────────────────────────── */
+.iconWrap { display: flex; }
+
+.projectTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  line-height: 1.35;
+}
+
+.platformDate {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: -0.2rem;
+}
+
+.platform {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.projectDescription {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  flex-grow: 1;
+  /* clamp to ~3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Footer / Cert button ──────────────────────────────────── */
+.cardFooter { padding-top: 0.2rem; display: flex; }
+
+.certBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--btn-color, var(--primary));
+  border: 1px solid var(--btn-color, var(--primary));
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+button.certBtn {
+  outline: none;
+}
+
+a.certBtn:hover {
+  background: var(--btn-color, var(--primary));
+  color: #fff;
+  transform: translateY(-2px);
+}

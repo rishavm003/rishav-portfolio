@@ -8,20 +8,7 @@ import { supabase } from '../../lib/supabaseClient';
 export default function Contact() {
   const [ref, isVisible] = useScrollReveal();
   const { email, phone, github, linkedin } = portfolioData.contact;
-  const [resumeUrl, setResumeUrl] = useState('#');
-
-  useEffect(() => {
-    async function fetchUrl() {
-      const { data } = supabase.storage
-        .from('portfolio-assets')
-        .getPublicUrl('resume.pdf');
-      
-      if (data && data.publicUrl) {
-        setResumeUrl(data.publicUrl);
-      }
-    }
-    fetchUrl();
-  }, []);
+  const [resumeUrl, setResumeUrl] = useState('https://ixnzwrhuekyyrqkrvlft.supabase.co/storage/v1/object/public/portfolio-assets/Resume/Resume%20latest.pdf');
 
   return (
     <section id="contact" className={styles.contactSection} ref={ref}>
