@@ -40,6 +40,16 @@ export const portfolioData = {
   },
   projects: [
     {
+      title: "GitHub Automation Bot",
+      description: "Advanced Python-based automation bot that manages GitHub workflows daily. Features automated commits, scans issues using Gemini AI to generate intelligent draft replies, and produces detailed daily performance reports.",
+      tags: ["Python", "Gemini AI", "Automation", "GitHub Actions"],
+      github: "https://github.com/rishavm003/Github-Automation",
+      accent: "#6366f1",
+      icon: "automation",
+      floatDuration: "7s",
+      floatDelay: "0.2s"
+    },
+    {
       title: "Mental Health Chatbot",
       description: "Empathetic conversational AI that detects signs of stress, anxiety, and depression from user text. Provides supportive responses, coping strategies, and recommends professional resources when needed.",
       tags: ["NLP", "LLM", "Healthcare", "Chatbot"],
