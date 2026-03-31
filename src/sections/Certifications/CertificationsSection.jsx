@@ -36,10 +36,7 @@ export default function CertificationsSection() {
       <div className={`container ${styles.container} ${isVisible ? styles.visible : ''}`}>
 
         <div className={styles.header}>
-          <div className={styles.headerTextWrap}>
-            <span className={styles.sectionLabel}>// achievements</span>
-            <h2 className={styles.title}>Certifications & Courses</h2>
-          </div>
+          <h2 className={styles.title}>Certifications & Courses</h2>
           <div className={styles.line} />
         </div>
 
