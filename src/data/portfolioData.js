@@ -46,7 +46,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Medical-Image-Analysis",
       accent: "#9d6fff",
       icon: "brain",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "7s",
       floatDelay: "0s"
     },
@@ -57,7 +56,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Real-Time-AI-Meeting-Intelligence-System",
       accent: "#00d4ff",
       icon: "meeting",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "6s",
       floatDelay: "3s"
     },
@@ -68,7 +66,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Autonomous-Trading-Bot",
       accent: "#00ff88",
       icon: "trading",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "8s",
       floatDelay: "1.2s"
     },
@@ -79,7 +76,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/AI-Powered-Healthcare-Triage-System",
       accent: "#00d4ff",
       icon: "health",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "6s",
       floatDelay: "0.4s"
     },
@@ -90,7 +86,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Mental-Health-Chatbot",
       accent: "#6366f1",
       icon: "chatbot",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "6.5s",
       floatDelay: "1.6s"
     },
@@ -101,7 +96,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Drug-Interaction-Checker",
       accent: "#f43f5e",
       icon: "drug",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "9s",
       floatDelay: "0.2s"
     },
@@ -112,7 +106,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Stock-Market-Sentiment-Analyzer",
       accent: "#fbbf24",
       icon: "sentiment",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "7.5s",
       floatDelay: "2s"
     },
@@ -123,7 +116,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Emotion-Detection-from-Facial-Expressions",
       accent: "#ff4d8d",
       icon: "emotion",
-      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "5.5s",
       floatDelay: "0.8s"
     },
@@ -134,7 +126,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-",
       accent: "#00ff88",
       icon: "cricket",
-      category: "📊 Data / Analytics + Mid-Level Projects",
       floatDuration: "8.5s",
       floatDelay: "1.8s"
     },
@@ -145,7 +136,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Blinkit-Sales-Analysis",
       accent: "#fbbf24",
       icon: "dashboard",
-      category: "📊 Data / Analytics + Mid-Level Projects",
       floatDuration: "5s",
       floatDelay: "2.5s"
     },
@@ -156,7 +146,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Github-Automation",
       accent: "#6366f1",
       icon: "automation",
-      category: "🧩 Supporting / Basic + Non-Core AI",
       floatDuration: "7s",
       floatDelay: "0.2s"
     },
@@ -167,7 +156,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/AI-Room-Design",
       accent: "#9d6fff",
       icon: "room",
-      category: "🧩 Supporting / Basic + Non-Core AI",
       floatDuration: "7s",
       floatDelay: "1s"
     },
@@ -178,7 +166,6 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Hospital-Patient-Records-Management-System",
       accent: "#6366f1",
       icon: "hospital",
-      category: "🧩 Supporting / Basic + Non-Core AI",
       floatDuration: "7s",
       floatDelay: "0.6s"
     }

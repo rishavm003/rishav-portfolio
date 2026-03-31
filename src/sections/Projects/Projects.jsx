@@ -28,7 +28,6 @@ const ProjectIcon = ({ type, color }) => {
 /* ─── Section ──────────────────────────────────────────────── */
 export default function Projects() {
   const [ref, isVisible] = useScrollReveal();
-  const categories = [...new Set(portfolioData.projects.map(p => p.category))];
 
   return (
     <section id="projects" className={styles.projectsSection} ref={ref}>
@@ -40,71 +39,60 @@ export default function Projects() {
           <div className={styles.line} />
         </div>
 
-        {categories.map((cat, catIdx) => (
-          <div key={catIdx} className={styles.categorySection}>
-            <div className={styles.categoryHeader}>
-              <h3 className={styles.categoryTitle}>{cat}</h3>
-              <div className={styles.categoryLine} />
-            </div>
+        <div className={styles.projectsGrid}>
+          {portfolioData.projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={styles.projectCard}
+              style={{
+                '--card-accent': project.accent,
+                animationDuration: project.floatDuration,
+                animationDelay: project.floatDelay,
+              }}
+            >
+              <div className={styles.cardGlow} />
 
-            <div className={styles.projectsGrid}>
-              {portfolioData.projects
-                .filter(p => p.category === cat)
-                .map((project, idx) => (
-                  <div
-                    key={idx}
-                    className={styles.projectCard}
+              <div className={styles.iconWrap}>
+                <ProjectIcon type={project.icon} color={project.accent} />
+              </div>
+
+              <h3 className={styles.projectTitle} style={{ color: project.accent }}>
+                {project.title}
+              </h3>
+
+              <p className={styles.projectDescription}>{project.description}</p>
+
+              <div className={styles.tagsContainer}>
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className={styles.tagPill}
                     style={{
-                      '--card-accent': project.accent,
-                      animationDuration: project.floatDuration,
-                      animationDelay: project.floatDelay,
+                      borderColor: `${project.accent}55`,
+                      color: project.accent,
+                      background: `${project.accent}12`,
                     }}
                   >
-                    <div className={styles.cardGlow} />
-
-                    <div className={styles.iconWrap}>
-                      <ProjectIcon type={project.icon} color={project.accent} />
-                    </div>
-
-                    <h3 className={styles.projectTitle} style={{ color: project.accent }}>
-                      {project.title}
-                    </h3>
-
-                    <p className={styles.projectDescription}>{project.description}</p>
-
-                    <div className={styles.tagsContainer}>
-                      {project.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className={styles.tagPill}
-                          style={{
-                            borderColor: `${project.accent}55`,
-                            color: project.accent,
-                            background: `${project.accent}12`,
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className={styles.cardFooter}>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={styles.githubBtn}
-                        style={{ '--btn-color': project.accent }}
-                      >
-                        <Github size={14} />
-                        <span>GitHub</span>
-                      </a>
-                    </div>
-                  </div>
+                    {tag}
+                  </span>
                 ))}
+              </div>
+
+              <div className={styles.cardFooter}>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.githubBtn}
+                  style={{ '--btn-color': project.accent }}
+                >
+                  <Github size={14} />
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         <div className={styles.viewAllWrap}>
           <a

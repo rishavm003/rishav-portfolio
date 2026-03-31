@@ -62,44 +62,6 @@
   .projectsGrid { grid-template-columns: 1fr; }
 }
 
-/* ── Category Sections ────────────────────────────────────────── */
-.categorySection {
-  margin-bottom: 5rem;
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.categoryHeader {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 2.2rem;
-  padding-left: 0.5rem;
-}
-
-.categoryTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  font-family: var(--font-mono);
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-  background: linear-gradient(135deg, var(--text-dark), #666);
-  -webkit-background-clip: text;
-  background-clip: text;
-  opacity: 0.9;
-}
-
-.categoryLine {
-  flex-grow: 1;
-  height: 1px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* ── Card ────────────────────────────────────────────────────── */
 .projectCard {
   position: relative;
