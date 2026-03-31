@@ -40,24 +40,15 @@ export const portfolioData = {
   },
   projects: [
     {
-      title: "GitHub Automation Bot",
-      description: "Advanced Python-based automation bot that manages GitHub workflows daily. Features automated commits, scans issues using Gemini AI to generate intelligent draft replies, and produces detailed daily performance reports.",
-      tags: ["Python", "Gemini AI", "Automation", "GitHub Actions"],
-      github: "https://github.com/rishavm003/Github-Automation",
-      accent: "#6366f1",
-      icon: "automation",
+      title: "NeuroScan Aid — Brain Tumor Detection",
+      description: "Deep learning system for medical image analysis that detects and classifies brain tumors from MRI scans. Built using CNNs and advanced image processing techniques, achieving high accuracy to assist radiologists in faster and more reliable diagnosis.",
+      tags: ["Deep Learning", "CNN", "Medical AI", "Python"],
+      github: "https://github.com/rishavm003/Medical-Image-Analysis",
+      accent: "#9d6fff",
+      icon: "brain",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "7s",
-      floatDelay: "0.2s"
-    },
-    {
-      title: "Mental Health Chatbot",
-      description: "Empathetic conversational AI that detects signs of stress, anxiety, and depression from user text. Provides supportive responses, coping strategies, and recommends professional resources when needed.",
-      tags: ["NLP", "LLM", "Healthcare", "Chatbot"],
-      github: "https://github.com/rishavm003/Mental-Health-Chatbot",
-      accent: "#6366f1",
-      icon: "chatbot",
-      floatDuration: "6.5s",
-      floatDelay: "1.6s"
+      floatDelay: "0s"
     },
     {
       title: "Real-Time AI Meeting Intelligence System",
@@ -66,6 +57,7 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Real-Time-AI-Meeting-Intelligence-System",
       accent: "#00d4ff",
       icon: "meeting",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "6s",
       floatDelay: "3s"
     },
@@ -76,6 +68,7 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Autonomous-Trading-Bot",
       accent: "#00ff88",
       icon: "trading",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "8s",
       floatDelay: "1.2s"
     },
@@ -86,8 +79,20 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/AI-Powered-Healthcare-Triage-System",
       accent: "#00d4ff",
       icon: "health",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "6s",
       floatDelay: "0.4s"
+    },
+    {
+      title: "Mental Health Chatbot",
+      description: "Empathetic conversational AI that detects signs of stress, anxiety, and depression from user text. Provides supportive responses, coping strategies, and recommends professional resources when needed.",
+      tags: ["NLP", "LLM", "Healthcare", "Chatbot"],
+      github: "https://github.com/rishavm003/Mental-Health-Chatbot",
+      accent: "#6366f1",
+      icon: "chatbot",
+      category: "⚙️ Strong Applied AI Projects",
+      floatDuration: "6.5s",
+      floatDelay: "1.6s"
     },
     {
       title: "Drug Interaction Checker",
@@ -96,28 +101,9 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Drug-Interaction-Checker",
       accent: "#f43f5e",
       icon: "drug",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "9s",
       floatDelay: "0.2s"
-    },
-    {
-      title: "NeuroScan Aid — Brain Tumor Detection",
-      description: "Deep learning system for medical image analysis that detects and classifies brain tumors from MRI scans. Built using CNNs and advanced image processing techniques, achieving high accuracy to assist radiologists in faster and more reliable diagnosis.",
-      tags: ["Deep Learning", "CNN", "Medical AI", "Python"],
-      github: "https://github.com/rishavm003/Medical-Image-Analysis",
-      accent: "#9d6fff",
-      icon: "brain",
-      floatDuration: "7s",
-      floatDelay: "0s"
-    },
-    {
-      title: "Emotion Detection from Facial Expressions",
-      description: "Real-time emotion recognition system using CNN and OpenCV that detects 7 human emotions from live webcam feed — happy, sad, angry, surprised, fearful, disgusted, and neutral. Highly visual and impressive in live demos.",
-      tags: ["Computer Vision", "CNN", "OpenCV", "Real-Time"],
-      github: "https://github.com/rishavm003/Emotion-Detection-from-Facial-Expressions",
-      accent: "#ff4d8d",
-      icon: "emotion",
-      floatDuration: "5.5s",
-      floatDelay: "0.8s"
     },
     {
       title: "Stock Market Sentiment Analyzer",
@@ -126,28 +112,20 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Stock-Market-Sentiment-Analyzer",
       accent: "#fbbf24",
       icon: "sentiment",
+      category: "⚙️ Strong Applied AI Projects",
       floatDuration: "7.5s",
       floatDelay: "2s"
     },
     {
-      title: "AI Room Design Assistant",
-      description: "Generative AI application that creates personalized interior room layouts based on user preferences. Users input their style, budget, and room dimensions — the AI generates design recommendations and furniture arrangements.",
-      tags: ["Generative AI", "UX", "HTML", "CSS"],
-      github: "https://github.com/rishavm003/AI-Room-Design",
-      accent: "#9d6fff",
-      icon: "room",
-      floatDuration: "7s",
-      floatDelay: "1s"
-    },
-    {
-      title: "Hospital Patient Records Management System",
-      description: "Full-stack system for managing hospital patient records — includes patient registration, medical history tracking, appointment scheduling, and doctor assignment. Built for real-world healthcare workflow efficiency.",
-      tags: ["Full Stack", "Healthcare", "Database", "SQL"],
-      github: "https://github.com/rishavm003/Hospital-Patient-Records-Management-System",
-      accent: "#6366f1",
-      icon: "hospital",
-      floatDuration: "7s",
-      floatDelay: "0.6s"
+      title: "Emotion Detection from Facial Expressions",
+      description: "Real-time emotion recognition system using CNN and OpenCV that detects 7 human emotions from live webcam feed — happy, sad, angry, surprised, fearful, disgusted, and neutral. Highly visual and impressive in live demos.",
+      tags: ["Computer Vision", "CNN", "OpenCV", "Real-Time"],
+      github: "https://github.com/rishavm003/Emotion-Detection-from-Facial-Expressions",
+      accent: "#ff4d8d",
+      icon: "emotion",
+      category: "⚙️ Strong Applied AI Projects",
+      floatDuration: "5.5s",
+      floatDelay: "0.8s"
     },
     {
       title: "T20 World Cup Cricket Analytics",
@@ -156,6 +134,7 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-",
       accent: "#00ff88",
       icon: "cricket",
+      category: "📊 Data / Analytics + Mid-Level Projects",
       floatDuration: "8.5s",
       floatDelay: "1.8s"
     },
@@ -166,8 +145,42 @@ export const portfolioData = {
       github: "https://github.com/rishavm003/Blinkit-Sales-Analysis",
       accent: "#fbbf24",
       icon: "dashboard",
+      category: "📊 Data / Analytics + Mid-Level Projects",
       floatDuration: "5s",
       floatDelay: "2.5s"
+    },
+    {
+      title: "GitHub Automation Bot",
+      description: "Advanced Python-based automation bot that manages GitHub workflows daily. Features automated commits, scans issues using Gemini AI to generate intelligent draft replies, and produces detailed daily performance reports.",
+      tags: ["Python", "Gemini AI", "Automation", "GitHub Actions"],
+      github: "https://github.com/rishavm003/Github-Automation",
+      accent: "#6366f1",
+      icon: "automation",
+      category: "🧩 Supporting / Basic + Non-Core AI",
+      floatDuration: "7s",
+      floatDelay: "0.2s"
+    },
+    {
+      title: "AI Room Design Assistant",
+      description: "Generative AI application that creates personalized interior room layouts based on user preferences. Users input their style, budget, and room dimensions — the AI generates design recommendations and furniture arrangements.",
+      tags: ["Generative AI", "UX", "HTML", "CSS"],
+      github: "https://github.com/rishavm003/AI-Room-Design",
+      accent: "#9d6fff",
+      icon: "room",
+      category: "🧩 Supporting / Basic + Non-Core AI",
+      floatDuration: "7s",
+      floatDelay: "1s"
+    },
+    {
+      title: "Hospital Patient Records Management System",
+      description: "Full-stack system for managing hospital patient records — includes patient registration, medical history tracking, appointment scheduling, and doctor assignment. Built for real-world healthcare workflow efficiency.",
+      tags: ["Full Stack", "Healthcare", "Database", "SQL"],
+      github: "https://github.com/rishavm003/Hospital-Patient-Records-Management-System",
+      accent: "#6366f1",
+      icon: "hospital",
+      category: "🧩 Supporting / Basic + Non-Core AI",
+      floatDuration: "7s",
+      floatDelay: "0.6s"
     }
   ],
   experience: [
