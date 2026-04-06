@@ -18,14 +18,9 @@ import {
 const skillsData = {
   technical: [
     {
-      category: 'Languages',
+      category: 'Programming Languages',
       icon: <Terminal size={20} />,
-      skills: ['Python', 'C++']
-    },
-    {
-      category: 'Frontend',
-      icon: <Code2 size={20} />,
-      skills: ['React.js', 'HTML', 'CSS', 'JavaScript']
+      skills: ['Python', 'C++', 'R']
     },
     {
       category: 'AI/ML Frameworks',
@@ -46,9 +41,9 @@ const skillsData = {
       ]
     },
     {
-      category: 'Deep Learning',
-      icon: <Layers size={20} />,
-      skills: ['Convolutional Neural Networks (CNNs)', 'Transformer Architecture', 'Transfer Learning', 'Model Fine-tuning']
+      category: 'Frontend',
+      icon: <Code2 size={20} />,
+      skills: ['React.js', 'HTML', 'CSS', 'JavaScript']
     },
     {
       category: 'Backend & APIs',
@@ -69,6 +64,11 @@ const skillsData = {
       category: 'MLOps & Tools',
       icon: <GitBranch size={20} />,
       skills: ['Git', 'GitHub', 'Jupyter Notebook', 'Docker']
+    },
+    {
+      category: 'Deep Learning',
+      icon: <Layers size={20} />,
+      skills: ['Convolutional Neural Networks (CNNs)', 'Transformer Architecture', 'Transfer Learning', 'Model Fine-tuning']
     }
   ],
   soft: [
@@ -133,24 +133,66 @@ export default function Skills() {
                 ))}
               </div>
               <div className={styles.technicalColumn}>
-                {skillsData.technical.slice(5, 9).map((skill, idx) => (
-                  <div key={idx + 5} className={styles.skillCategory}>
-                    <div className={styles.categoryHeader}>
-                      <div className={styles.iconWrapper}>
-                        {skill.icon}
-                      </div>
-                      <span className={styles.categoryName}>{skill.category}</span>
+                <div key={8} className={styles.skillCategory}>
+                  <div className={styles.categoryHeader}>
+                    <div className={styles.iconWrapper}>
+                      {skillsData.technical[8].icon}
                     </div>
-                    <div className={styles.skillTags}>
-                      {skill.skills.map((tech, i) => (
-                        <span key={i} className={styles.skillTag}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <span className={styles.categoryName}>{skillsData.technical[8].category}</span>
                   </div>
-                ))}
-                {/* Deep Learning at the bottom */}
+                  <div className={styles.skillTags}>
+                    {skillsData.technical[8].skills.map((tech, i) => (
+                      <span key={i} className={styles.skillTag}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div key={5} className={styles.skillCategory}>
+                  <div className={styles.categoryHeader}>
+                    <div className={styles.iconWrapper}>
+                      {skillsData.technical[5].icon}
+                    </div>
+                    <span className={styles.categoryName}>{skillsData.technical[5].category}</span>
+                  </div>
+                  <div className={styles.skillTags}>
+                    {skillsData.technical[5].skills.map((tech, i) => (
+                      <span key={i} className={styles.skillTag}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div key={6} className={styles.skillCategory}>
+                  <div className={styles.categoryHeader}>
+                    <div className={styles.iconWrapper}>
+                      {skillsData.technical[6].icon}
+                    </div>
+                    <span className={styles.categoryName}>{skillsData.technical[6].category}</span>
+                  </div>
+                  <div className={styles.skillTags}>
+                    {skillsData.technical[6].skills.map((tech, i) => (
+                      <span key={i} className={styles.skillTag}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div key={7} className={styles.skillCategory}>
+                  <div className={styles.categoryHeader}>
+                    <div className={styles.iconWrapper}>
+                      {skillsData.technical[7].icon}
+                    </div>
+                    <span className={styles.categoryName}>{skillsData.technical[7].category}</span>
+                  </div>
+                  <div className={styles.skillTags}>
+                    {skillsData.technical[7].skills.map((tech, i) => (
+                      <span key={i} className={styles.skillTag}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
                 <div key={4} className={styles.skillCategory}>
                   <div className={styles.categoryHeader}>
                     <div className={styles.iconWrapper}>
@@ -169,8 +211,6 @@ export default function Skills() {
               </div>
             </div>
           </div>
-          
-          {/* Soft Skills & Core */}
           <div className={styles.otherSkills}>
             <h3 className={styles.sectionTitle}>Soft & Core Skills</h3>
             <div className={styles.skillsCards}>

@@ -63,7 +63,6 @@ export default function UpdateResume() {
       document.getElementById('file-upload').value = null;
 
     } catch (error) {
-      console.error('Upload Error:', error);
       setMessage(`Upload failed: ${error.message}`);
     } finally {
       setIsUploading(false);
