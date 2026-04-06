@@ -5,16 +5,43 @@ import { portfolioData } from '../../data/portfolioData';
 export default function NeuralNetwork() {
   const { name } = portfolioData.hero;
 
+  // Generate 8 nodes in a circle
+  const nodeCount = 8;
+  const radius = 100;
+  const centerX = 150;
+  const centerY = 150;
+  
+  const nodes = Array.from({ length: nodeCount }, (_, i) => {
+    const angle = (i * 360) / nodeCount - 90; // Start from top
+    const radian = (angle * Math.PI) / 180;
+    return {
+      id: i,
+      x: centerX + radius * Math.cos(radian),
+      y: centerY + radius * Math.sin(radian),
+      isPink: i % 2 === 1, // Alternate purple/pink
+    };
+  });
+
   return (
     <div className={styles.networkContainer}>
       <svg className={styles.svgNetwork} viewBox="0 0 300 300">
         <defs>
-          <linearGradient id="signalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0" />
-            <stop offset="50%" stopColor="var(--accent)" stopOpacity="1" />
-            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6d4bff" />
+            <stop offset="100%" stopColor="#9b7bff" />
           </linearGradient>
-          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f43f5e" />
+            <stop offset="100%" stopColor="#ff6b8a" />
+          </linearGradient>
+          <filter id="purpleGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="pinkGlow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
@@ -23,70 +50,76 @@ export default function NeuralNetwork() {
           </filter>
         </defs>
 
-        {/* Connections (Lines) */}
-        <g className={styles.connections}>
-          {/* Layer 1 to center */}
-          <line x1="40" y1="50" x2="150" y2="150" />
-          <line x1="30" y1="150" x2="150" y2="150" />
-          <line x1="40" y1="250" x2="150" y2="150" />
-          
-          {/* Layer 2 to center */}
-          <line x1="260" y1="50" x2="150" y2="150" />
-          <line x1="270" y1="150" x2="150" y2="150" />
-          <line x1="260" y1="250" x2="150" y2="150" />
-
-          {/* Interconnections */}
-          <line x1="40" y1="50" x2="100" y2="90" />
-          <line x1="30" y1="150" x2="100" y2="90" />
-          <line x1="30" y1="150" x2="100" y2="210" />
-          <line x1="40" y1="250" x2="100" y2="210" />
-
-          <line x1="260" y1="50" x2="200" y2="90" />
-          <line x1="270" y1="150" x2="200" y2="90" />
-          <line x1="270" y1="150" x2="200" y2="210" />
-          <line x1="260" y1="250" x2="200" y2="210" />
-
-          <line x1="100" y1="90" x2="150" y2="150" />
-          <line x1="100" y1="210" x2="150" y2="150" />
-          <line x1="200" y1="90" x2="150" y2="150" />
-          <line x1="200" y1="210" x2="150" y2="150" />
-        </g>
+        {/* Outer faint circle */}
+        <circle cx="150" cy="150" r="130" fill="rgba(109, 75, 255, 0.05)" />
         
-        {/* Animated Signals */}
-        <g className={styles.signals}>
-           <path d="M 30 150 L 150 150" className={styles.signalPath} />
-           <path d="M 40 50 L 150 150" className={styles.signalPathDelay1} />
-           <path d="M 260 250 L 150 150" className={styles.signalPathDelay2} />
-           <path d="M 270 150 L 150 150" className={styles.signalPathDelay3} />
+        {/* Connection lines */}
+        <g className={styles.connections}>
+          {/* Connect outer nodes to each other (octagon shape) */}
+          {nodes.map((node, i) => {
+            const nextNode = nodes[(i + 1) % nodeCount];
+            return (
+              <line
+                key={`outer-${i}`}
+                x1={node.x}
+                y1={node.y}
+                x2={nextNode.x}
+                y2={nextNode.y}
+                className={styles.connectionLine}
+              />
+            );
+          })}
+          
+          {/* Connect each node to center */}
+          {nodes.map((node, i) => (
+            <line
+              key={`center-${i}`}
+              x1={node.x}
+              y1={node.y}
+              x2={centerX}
+              y2={centerY}
+              className={styles.connectionLine}
+            />
+          ))}
+          
+          {/* Cross connections for neural network effect */}
+          {[0, 2, 4, 6].map((i) => {
+            const oppositeIndex = (i + 4) % nodeCount;
+            return (
+              <line
+                key={`cross-${i}`}
+                x1={nodes[i].x}
+                y1={nodes[i].y}
+                x2={nodes[oppositeIndex].x}
+                y2={nodes[oppositeIndex].y}
+                className={styles.connectionLine}
+              />
+            );
+          })}
         </g>
 
-        {/* Nodes (Circles) */}
-        <g className={styles.nodes} filter="url(#glow)">
-          {/* Input Layer */}
-          <circle cx="40" cy="50" r="6" />
-          <circle cx="30" cy="150" r="8" />
-          <circle cx="40" cy="250" r="6" />
-
-          {/* Hidden Layer 1 */}
-          <circle cx="100" cy="90" r="7" className={styles.pulseNode} />
-          <circle cx="100" cy="210" r="7" className={styles.pulseNodeDelay} />
-
-          {/* Hidden Layer 2 */}
-          <circle cx="200" cy="90" r="7" className={styles.pulseNodeDelay2} />
-          <circle cx="200" cy="210" r="7" className={styles.pulseNode} />
-
-          {/* Output Layer */}
-          <circle cx="260" cy="50" r="6" />
-          <circle cx="270" cy="150" r="8" />
-          <circle cx="260" cy="250" r="6" />
-
-          {/* Center Brain Node */}
-          <circle cx="150" cy="150" r="45" className={styles.centerNode} />
+        {/* Outer nodes */}
+        <g className={styles.outerNodes}>
+          {nodes.map((node, i) => (
+            <circle
+              key={node.id}
+              cx={node.x}
+              cy={node.y}
+              r={node.isPink ? 10 : 8}
+              fill={node.isPink ? "url(#pinkGrad)" : "url(#purpleGrad)"}
+              filter={node.isPink ? "url(#pinkGlow)" : "url(#purpleGlow)"}
+              className={node.isPink ? styles.pinkNode : styles.purpleNode}
+            />
+          ))}
         </g>
 
-        {/* Center Text */}
-        <text x="150" y="145" textAnchor="middle" className={styles.centerName}>{name}</text>
-        <text x="150" y="165" textAnchor="middle" className={styles.centerRole}>AI Engineer</text>
+        {/* Center circle */}
+        <circle cx="150" cy="150" r="55" fill="url(#purpleGrad)" filter="url(#purpleGlow)" />
+        <circle cx="150" cy="150" r="45" fill="#6d4bff" />
+        
+        {/* Center text */}
+        <text x="150" y="142" textAnchor="middle" className={styles.centerName}>{name}</text>
+        <text x="150" y="162" textAnchor="middle" className={styles.centerRole}>AI Engineer</text>
       </svg>
     </div>
   );

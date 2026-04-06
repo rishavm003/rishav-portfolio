@@ -1,15 +1,11 @@
 .networkContainer {
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
   aspect-ratio: 1;
-  margin: 0 auto;
   position: relative;
-  background: rgba(109, 75, 255, 0.05); /* very faint purple backdrop */
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 40px rgba(109, 75, 255, 0.1);
 }
 
 .svgNetwork {
@@ -18,97 +14,61 @@
   overflow: visible;
 }
 
-/* Connections base style */
-.connections line {
-  stroke: rgba(109, 75, 255, 0.3); /* muted primary */
+/* Connection lines */
+.connectionLine {
+  stroke: rgba(109, 75, 255, 0.4);
   stroke-width: 1.5;
   stroke-linecap: round;
 }
 
-/* Base Nodes */
-.nodes circle {
-  fill: var(--primary);
-  transition: all 0.3s ease;
+/* Purple nodes */
+.purpleNode {
+  animation: purplePulse 3s ease-in-out infinite;
 }
 
-.centerNode {
-  fill: var(--primary) !important;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 15px rgba(109, 75, 255, 0.6));
+@keyframes purplePulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }
 
-/* Center Text */
+/* Pink nodes */
+.pinkNode {
+  animation: pinkPulse 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes pinkPulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* Center text styling */
 .centerName {
   fill: #ffffff;
   font-family: var(--font-display);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
-  z-index: 10;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
 }
 
 .centerRole {
-  fill: #f5f5f5;
+  fill: #e0e0e0;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
-  z-index: 10;
-}
-
-/* Pulsing Node Animations */
-.pulseNode {
-  animation: pulse 3s infinite alternate;
-}
-
-.pulseNodeDelay {
-  animation: pulse 3s infinite alternate;
-  animation-delay: 1.5s;
-}
-
-.pulseNodeDelay2 {
-  animation: pulse 4s infinite alternate;
-  animation-delay: 0.5s;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); fill: var(--primary); }
-  100% { transform: scale(1.3); fill: var(--accent); filter: drop-shadow(0 0 8px var(--accent)); }
-}
-
-/* Signal Traveling Animations */
-.signalPath, .signalPathDelay1, .signalPathDelay2, .signalPathDelay3 {
-  fill: none;
-  stroke: url(#signalGrad);
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-dasharray: 40 300; /* small dash space */
-  stroke-dashoffset: 340;
-}
-
-.signalPath {
-  animation: travel 3s linear infinite;
-}
-
-.signalPathDelay1 {
-  animation: travel 4s linear infinite;
-  animation-delay: 1s;
-}
-
-.signalPathDelay2 {
-  animation: travel 3.5s linear infinite;
-  animation-delay: 2s;
-}
-
-.signalPathDelay3 {
-  animation: travel 4.5s linear infinite;
-  animation-delay: 0.5s;
-}
-
-@keyframes travel {
-  0% { stroke-dashoffset: 340; opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { stroke-dashoffset: -40; opacity: 0; }
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
 }

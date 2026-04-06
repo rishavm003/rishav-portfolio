@@ -15,15 +15,10 @@ export const portfolioData = {
   },
   skills: {
     technical: [
-      { category: "Languages", items: "Python, C++" },
-      { category: "AI / ML Frameworks", items: "TensorFlow, PyTorch, Scikit-learn, HuggingFace Transformers, Whisper" },
-      { category: "AI Specializations", items: "Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Agentic AI Systems, NLP (NLTK, SpaCy), Computer Vision (YOLO, CNNs), Sentiment Analysis, Speech Recognition" },
-      { category: "Deep Learning", items: "Convolutional Neural Networks (CNNs), Transformer Architecture, Transfer Learning, Model Fine-tuning" },
-      { category: "Backend & APIs", items: "FastAPI, REST APIs, Streaming Pipelines" },
-      { category: "Frontend", items: "React.js (Dashboard Development)" },
-      { category: "Databases", items: "MySQL, MongoDB" },
-      { category: "Cloud Platforms", items: "AWS, Google Cloud" },
-      { category: "MLOps & Tools", items: "Git, GitHub, Jupyter Notebook" }
+      { category: "Languages", skills: ["Python", "C++"] },
+      { category: "Frontend", skills: ["React.js", "HTML", "CSS", "JavaScript"] },
+      { category: "Backend", skills: ["FastAPI", "SQL", "MongoDB", "Python"] },
+      { category: "Tools & Others", skills: ["Git", "Docker", "Jupyter", "AWS", "Google Cloud"] }
     ],
     soft: [
       "Communication & Collaboration",
@@ -177,7 +172,8 @@ export const portfolioData = {
       date: "August 2025 – Present",
       location: "Lucknow (On-site)",
       points: [
-        "Performed data analysis on the NIELIT education portal to evaluate course engagement and completion trends; delivered data-driven recommendations that increased overall output by 27% and course enrollments by 42%.",
+        "Performed data analysis on the NIELIT education portal to evaluate course engagement and completion trends",
+        "delivered data - driven recommendations that increased overall output by 27 % and course enrollments by 42 %.",
         "Prepared technical documentation and reports in line with institutional standards."
       ]
     },

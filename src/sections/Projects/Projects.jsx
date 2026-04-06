@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Projects.module.css';
 import { portfolioData } from '../../data/portfolioData';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { Code, Github } from 'lucide-react';
+import { Code, Github, ExternalLink } from 'lucide-react';
 
 /* ─── Topic icons ──────────────────────────────────────────── */
 const ProjectIcon = ({ type, color }) => {
@@ -32,77 +32,84 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.projectsSection} ref={ref}>
       <div className={`container ${styles.container} ${isVisible ? styles.visible : ''}`}>
-
         <div className={styles.header}>
-          <Code className={styles.icon} size={32} />
-          <h2 className={styles.title}>Featured Projects</h2>
-          <div className={styles.line} />
+          <div className="reveal">
+            <div className={styles.headerLeft}>
+              <Code className={styles.headerIcon} size={28} />
+              <h2 className={styles.title}>Featured Projects</h2>
+            </div>
+            <div className={styles.headerLine}></div>
+          </div>
         </div>
-
+        
         <div className={styles.projectsGrid}>
           {portfolioData.projects.map((project, idx) => (
-            <div
-              key={idx}
-              className={styles.projectCard}
+            <div 
+              key={idx} 
+              className={`${styles.projectCard} glass-panel reveal`} 
               style={{
-                '--card-accent': project.accent,
-                animationDuration: project.floatDuration,
-                animationDelay: project.floatDelay,
+                '--project-accent': project.accent,
+                '--stagger-index': idx
               }}
             >
-              <div className={styles.cardGlow} />
-
-              <div className={styles.iconWrap}>
-                <ProjectIcon type={project.icon} color={project.accent} />
+              <div className={styles.cardHeader}>
+                <div className={styles.iconWrap} style={{ background: `${project.accent}15` }}>
+                  <ProjectIcon type={project.icon} color={project.accent} />
+                </div>
+                <div className={styles.headerLinks}>
+                  <a href={project.github} target="_blank" rel="noreferrer" className={styles.iconLink}>
+                    <Github size={20} />
+                  </a>
+                </div>
               </div>
-
-              <h3 className={styles.projectTitle} style={{ color: project.accent }}>
-                {project.title}
-              </h3>
-
-              <p className={styles.projectDescription}>{project.description}</p>
-
-              <div className={styles.tagsContainer}>
-                {project.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className={styles.tagPill}
-                    style={{
-                      borderColor: `${project.accent}55`,
-                      color: project.accent,
-                      background: `${project.accent}12`,
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
+              
+              <div className={styles.cardBody}>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <div className={styles.descriptionWrapper}>
+                  <p className={styles.projectDescription}>{project.description}</p>
+                </div>
+                
+                <div className={styles.tagsContainer}>
+                  {project.tags.map((tag, i) => (
+                    <span 
+                      key={i} 
+                      className={styles.tagPill}
+                      style={{ 
+                        color: project.accent, 
+                        background: `${project.accent}12`
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-
+              
               <div className={styles.cardFooter}>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.githubBtn}
-                  style={{ '--btn-color': project.accent }}
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className={styles.viewBtn}
                 >
-                  <Github size={14} />
-                  <span>GitHub</span>
+                  <Github size={18} />
+                  <span>GitHub Repo</span>
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        <div className={styles.viewAllWrap}>
+        <div className={`${styles.viewAllWrap} reveal`}>
           <a
             href="https://github.com/rishavm003"
             target="_blank"
             rel="noreferrer"
             className={styles.viewAllBtn}
           >
-            <Github size={18} />
-            <span>View All Projects on GitHub</span>
+            <Github size={20} />
+            <span>Check out more on GitHub</span>
+            <ExternalLink size={16} />
           </a>
         </div>
 

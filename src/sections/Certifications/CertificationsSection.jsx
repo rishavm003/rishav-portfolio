@@ -32,71 +32,57 @@ export default function CertificationsSection() {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section id="certifications" className={styles.projectsSection} ref={ref}>
+    <section id="certifications" className={styles.certSection} ref={ref}>
       <div className={`container ${styles.container} ${isVisible ? styles.visible : ''}`}>
 
         <div className={styles.header}>
-          <h2 className={styles.title}>Certifications & Courses</h2>
-          <div className={styles.line} />
+          <div className="reveal">
+            <h2 className={styles.title}>Certifications & <span className="text-gradient">Courses</span></h2>
+            <div className={styles.line} />
+          </div>
         </div>
 
-        <div className={styles.projectsGrid}>
+        <div className={styles.certGrid}>
           {certifications.map((cert, idx) => {
-            const isPlaceholder = !cert.link || cert.link === "your-certificate-link-here";
             const iconType = getIconForCert(cert.title);
-            // Derive generic float parameters to match Projects
-            const floatDuration = `${5 + (idx % 3)}s`;
-            const floatDelay = `${(idx % 4) * 0.5}s`;
-
+            
             return (
               <div
                 key={cert.id || idx}
-                className={styles.projectCard}
-                style={{
-                  '--card-accent': cert.accentColor,
-                  animationDuration: floatDuration,
-                  animationDelay: floatDelay,
-                }}
+                className={`${styles.certCardContainer} reveal`}
+                style={{ '--stagger-index': idx }}
               >
-                <div className={styles.cardGlow} />
+                <div className={styles.certCardInner}>
+                  {/* Front of Card */}
+                  <div className={`${styles.certCardFront} glass-panel`} style={{ borderTop: `4px solid ${cert.accentColor}` }}>
+                    <div className={styles.iconWrap} style={{ background: `${cert.accentColor}15` }}>
+                      <CertIcon type={iconType} color={cert.accentColor} />
+                    </div>
+                    <h3 className={styles.certTitle}>{cert.title}</h3>
+                    <div className={styles.platformBadge} style={{ color: cert.accentColor, background: `${cert.accentColor}10` }}>
+                      {cert.platform}
+                    </div>
+                    <div className={styles.date}>{cert.date}</div>
+                    <div className={styles.flipHint}>Hover to details ➔</div>
+                  </div>
 
-                <div className={styles.iconWrap}>
-                  <CertIcon type={iconType} color={cert.accentColor} />
-                </div>
-
-                <h3 className={styles.projectTitle} style={{ color: cert.accentColor }}>
-                  {cert.title}
-                </h3>
-                
-                <div className={styles.platformDate}>
-                  <span className={styles.platform}>{cert.platform}</span>
-                  <span className={styles.date}>{cert.date}</span>
-                </div>
-
-                <p className={styles.projectDescription}>{cert.description}</p>
-
-                <div className={styles.cardFooter}>
-                  {isPlaceholder ? (
-                    <button
-                      disabled
-                      className={styles.certBtn}
-                      style={{ '--btn-color': cert.accentColor, opacity: 0.5, cursor: 'not-allowed' }}
-                    >
-                      <ExternalLink size={14} />
-                      <span>View Certificate</span>
-                    </button>
-                  ) : (
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.certBtn}
-                      style={{ '--btn-color': cert.accentColor }}
-                    >
-                      <ExternalLink size={14} />
-                      <span>View Certificate</span>
-                    </a>
-                  )}
+                  {/* Back of Card */}
+                  <div className={`${styles.certCardBack} glass-panel`} style={{ background: `linear-gradient(135deg, ${cert.accentColor}20, var(--bg-color-glass))` }}>
+                    <h4 className={styles.backTitle}>Overview</h4>
+                    <p className={styles.description}>{cert.description}</p>
+                    <div className={styles.footer}>
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.verifyBtn}
+                        style={{ background: cert.accentColor }}
+                      >
+                        Verify Certificate
+                        <ExternalLink size={16} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
