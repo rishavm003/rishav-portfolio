@@ -65,6 +65,16 @@ export const portfolioData = {
       floatDelay: "1.2s"
     },
     {
+      title: "HumanizeAI — Premium AI Text Humanizer",
+      description: "A full-stack platform that transforms AI-generated content into natural, human-like text that bypasses detectors. Features a sleek glassmorphic UI, Groq LLM integration, and a secure credit-based system.",
+      tags: ["Full Stack", "AI/LLM", "React", "Supabase", "Groq"],
+      github: "https://github.com/rishavm003/HumanizeAI",
+      accent: "#8b5cf6",
+      icon: "sparkles",
+      floatDuration: "7.5s",
+      floatDelay: "0.5s"
+    },
+    {
       title: "AI-Powered Healthcare Triage System",
       description: "Intelligent triage system that uses AI to assess patient symptoms, prioritize cases by urgency, and recommend appropriate care pathways. Reduces wait times and improves hospital resource allocation.",
       tags: ["AI", "Healthcare", "NLP", "Python"],
