@@ -3,37 +3,19 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://rishav-mishra-portfolio.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-rishavm003-black?style=for-the-badge&logo=github)](https://github.com/rishavm003/rishav-portfolio)
 
-A modern, responsive personal portfolio website built with **React** and **Vite**, featuring a dynamic project showcase, contact form, and an admin panel powered by **Supabase**.
-
-
-
-## 📸 Screenshots
-
-![Home Section](ScreenShots/Home_page.png)
-*Hero — "I build Intelligent Software."*
-
-![About Section](ScreenShots/About_page.png)
-*About Me — AI Engineer with a passion for building real systems*
-
- ![Skills](ScreenShots/Skill_page.png) 
-
-![Experience](ScreenShots/Experience_page.png) 
-
-
- ![Contact](ScreenShots/Get_in_touch_page.png) 
- 📬 **Contact** — Open to full-time & internship roles in AI/ML 
-
+A modern, high-performance personal portfolio website built with **React**, **Vite**, and **Supabase**. This project features a professional-grade architecture, dynamic project showcases, and a secure admin panel for content management.
 
 ---
 
 ## ✨ Features
 
-- 🎨 Clean and modern UI with smooth animations
-- 📱 Fully responsive across all devices
-- 🗂️ Dynamic project showcase with live/GitHub links
-- 📬 Contact form with Supabase backend storage
-- 🔐 Password-protected admin panel to manage content
-- ⚡ Fast performance with Vite build tooling
+- 🎨 **Modern Aesthetics**: Clean UI with glassmorphism, smooth animations, and high-tech visual effects.
+- 🌓 **Theme Support**: Seamless switching between Light and Dark modes.
+- ⚡ **Optimized Performance**: Built with Vite and organized using professional architecture patterns (Aliases, Barrel Exports).
+- 📱 **Fully Responsive**: Optimized for every screen size from mobile to desktop.
+- 🗂️ **Dynamic Showcase**: Automated project and certification rendering from structured data.
+- 📬 **Backend Integration**: Functional contact form and resume management powered by **Supabase**.
+- 🔐 **Secure Admin**: Password-protected dashboard to update your latest resume.
 
 ---
 
@@ -41,26 +23,32 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 | Technology | Usage |
 |------------|-------|
-| React | Frontend framework |
-| Vite | Build tool & dev server |
-| Supabase | Backend & database |
-| CSS | Styling |
-| Vercel | Deployment & hosting |
+| **React 19** | Modern UI framework |
+| **Vite** | Fast build tooling and alias mapping |
+| **Supabase** | Database, Storage (Resume), and Edge logic |
+| **Framer Motion** | Advanced micro-animations |
+| **Lucide React** | Consistent, lightweight iconography |
+| **CSS Modules** | Scoped, maintainable styling |
 
 ---
 
 ## 📁 Project Structure
 
+The project follows a clean, scalable architecture with path aliases (`@/` points to `src/`):
+
 ```
-rishav-portfolio/
-├── public/          # Static assets
-├── src/
-│   ├── components/  # Reusable UI components
-│   ├── pages/       # Page components
-│   └── main.jsx     # App entry point
-├── index.html
-├── vite.config.js
-└── package.json
+src/
+├── components/      # Reusable components
+│   ├── layout/      # Navbar, Footer (with barrel exports)
+│   ├── effects/     # Visual effects (LetterGlitch, etc.)
+│   └── ui/          # Common UI elements (ShinyText, etc.)
+├── contexts/        # Theme and Global State Management
+├── data/            # Content configuration (portfolioData.js)
+├── hooks/           # Reusable logic (useScrollReveal, etc.)
+├── layouts/         # Main page structures (MainLayout)
+├── pages/           # Standalone routes (Admin Dashboard)
+├── sections/        # Homepage modular sections (About, Skills, etc.)
+└── styles/          # Design system & Global CSS
 ```
 
 ---
@@ -102,28 +90,23 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Build for Production
-
-```bash
-npm run build
-```
-
 ---
 
 ## 🌐 Deployment
 
-This project is deployed on **Vercel**. Any push to the `main` branch triggers an automatic redeployment.
+This project is deployed on **Vercel**. Continuous integration ensures that any push to the `main` branch triggers an automatic production build.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/rishavm003/rishav-portfolio)
 
 ---
 
-## 📬 Contact.
+## 📬 Contact
 
 **Rishav Mishra** — AI Engineer | B.Tech CSE (AI), BBD University, Lucknow
 
-- 🌐 Portfolio: [rishav-mishra-portfolio.vercel.app](https://rishav-mishra-portfolio.vercel.app/)
-- 💼 GitHub: [@rishavm003](https://github.com/rishavm003)
+- 🌐 Portfolio: [Visit Live Site](https://rishav-mishra-portfolio.vercel.app/)
+- 💼 LinkedIn: [Rishav Mishra](https://linkedin.com/in/rishavm003)
+- 💻 GitHub: [@rishavm003](https://github.com/rishavm003)
 
 ---
 

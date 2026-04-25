@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Navbar, Footer } from '@/components/layout';
 import { Home, About, Skills, Projects, Certifications, Experience, Contact } from '@/sections';
-import { GeometricBackground } from '@/components/effects';
 
 const MainLayout = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -63,14 +62,7 @@ const MainLayout = () => {
         style={{ width: `${scrollProgress}%` }}
       />
       
-      {/* Custom Abstract Geometric Background - Hidden on Home Page */}
-      <div id="geometric-bg" style={{ 
-        opacity: 0, 
-        visibility: 'hidden', 
-        transition: 'opacity 0.8s ease, visibility 0.8s ease' 
-      }}>
-        <GeometricBackground />
-      </div>
+
       
       <Navbar />
       <main>
