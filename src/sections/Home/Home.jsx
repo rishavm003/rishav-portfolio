@@ -1,49 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
-import { portfolioData } from '../../data/portfolioData';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import NeuralNetwork from '../../components/NeuralNetwork/NeuralNetwork';
+import { portfolioData } from '@/data/portfolioData';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { LetterGlitch } from '@/components/effects';
+import { ShinyText } from '@/components/ui';
 import { MapPin, GraduationCap, Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function Home() {
   const [ref, isVisible] = useScrollReveal();
-  const [particles, setParticles] = useState([]);
   const { name, role: originalRole, tagline, location, education } = portfolioData.hero;
   const { email, phone, github, linkedin } = portfolioData.contact;
 
-  // Generate particles for background
-  useEffect(() => {
-    const particleArray = [];
-    for (let i = 0; i < 50; i++) {
-      particleArray.push({
-        id: i,
-        left: Math.random() * 100,
-        animationDelay: Math.random() * 10,
-        animationDuration: 8 + Math.random() * 4
-      });
-    }
-    setParticles(particleArray);
-  }, []);
-
   return (
     <section id="home" className={styles.homeSection} ref={ref}>
-      {/* Particle Background */}
-      <div className={styles.particleBg}>
-        {particles.map(particle => (
-          <div
-            key={particle.id}
-            className={styles.particle}
-            style={{
-              left: `${particle.left}%`,
-              animationDelay: `${particle.animationDelay}s`,
-              animationDuration: `${particle.animationDuration}s`
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Grid Background */}
-      <div className={styles.gridBg} />
+      {/* LetterGlitch Background */}
+      <LetterGlitch 
+        glitchSpeed={50}
+        centerVignette={true}
+        outerVignette={false}
+        smooth={true}
+      />
 
       <div className={`${styles.content} ${isVisible ? styles.visible : ''}`}>
         <p className={styles.greeting}>Hi, my name is</p>
@@ -52,7 +28,15 @@ export default function Home() {
           I build <span className="text-gradient">Intelligent</span> Software
           <span className="terminal-cursor" />
         </h2>
-        <p className={styles.description}>{tagline}</p>
+        <p className={styles.description}>
+          <ShinyText 
+            text={tagline} 
+            speed={3} 
+            color="var(--text-dark)" 
+            shineColor="var(--primary)" 
+            pauseOnHover={true}
+          />
+        </p>
         
         <div className={styles.metaData}>
           <div className={styles.metaItem}>
@@ -87,14 +71,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Neural Network Graphic */}
-      <div className={`${styles.graphic} ${isVisible ? styles.visible : ''}`}>
-        <NeuralNetwork />
-      </div>
-      
-      {/* Background Glowing Orb */}
-      <div className={styles.glowingOrb} />
     </section>
   );
 }

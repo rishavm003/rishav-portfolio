@@ -1,0 +1,142 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.diamond {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  transform: rotate(45deg);
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Specific diamond placements and styles to match the image */
+
+.d1 {
+  top: -150px;
+  left: -200px;
+  background-color: rgba(0, 212, 255, 0.3);
+  /* Cyan 30% */
+}
+
+.d2 {
+  top: -200px;
+  left: 50px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  background-color: transparent;
+}
+
+.d3 {
+  top: 100px;
+  left: -100px;
+  background-color: rgba(0, 212, 255, 0.15);
+  /* Very light cyan */
+}
+
+.d4 {
+  top: 350px;
+  left: 150px;
+  background-color: rgba(0, 212, 255, 0.6);
+  /* Solid/bright cyan */
+}
+
+.d5 {
+  top: 100px;
+  left: 400px;
+  background-color: rgba(0, 212, 255, 0.05);
+  /* Extremely pale */
+}
+
+.d6 {
+  top: 600px;
+  left: -100px;
+  background-color: rgba(0, 212, 255, 0.3);
+}
+
+.d7 {
+  top: 850px;
+  left: 150px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  background-color: transparent;
+}
+
+/* Adjust colors for Dark Mode to keep them looking right */
+:global([data-theme="dark"]) .d1 {
+  background-color: rgba(109, 75, 255, 0.2);
+}
+
+:global([data-theme="dark"]) .d2 {
+  border-color: rgba(109, 75, 255, 0.2);
+}
+
+:global([data-theme="dark"]) .d3 {
+  background-color: rgba(109, 75, 255, 0.1);
+}
+
+:global([data-theme="dark"]) .d4 {
+  background-color: rgba(109, 75, 255, 0.4);
+}
+
+:global([data-theme="dark"]) .d5 {
+  background-color: rgba(109, 75, 255, 0.03);
+}
+
+:global([data-theme="dark"]) .d6 {
+  background-color: rgba(109, 75, 255, 0.2);
+}
+
+:global([data-theme="dark"]) .d7 {
+  border-color: rgba(109, 75, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .diamond {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .d1 {
+    top: -100px;
+    left: -100px;
+  }
+
+  .d2 {
+    top: -120px;
+    left: 40px;
+  }
+
+  .d3 {
+    top: 40px;
+    left: -40px;
+  }
+
+  .d4 {
+    top: 180px;
+    left: 100px;
+  }
+
+  .d5 {
+    top: 40px;
+    left: 240px;
+  }
+
+  .d6 {
+    top: 320px;
+    left: -40px;
+  }
+
+  .d7 {
+    top: 460px;
+    left: 100px;
+  }
+}

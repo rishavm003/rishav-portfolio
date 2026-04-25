@@ -1,6 +1,6 @@
 .certSection {
   padding: 100px 0;
-  background-color: var(--bg-color-light);
+  background-color: transparent;
   position: relative;
 }
 

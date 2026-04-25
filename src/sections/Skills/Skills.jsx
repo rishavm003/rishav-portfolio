@@ -14,6 +14,7 @@ import {
   Network,
   Layers
 } from 'lucide-react';
+import { ShinyText } from '@/components/ui';
 
 const skillsData = {
   technical: [
@@ -120,7 +121,16 @@ export default function Skills() {
                       <div className={styles.iconWrapper}>
                         {skill.icon}
                       </div>
-                      <span className={styles.categoryName}>{skill.category}</span>
+                      <span className={styles.categoryName}>
+                        <ShinyText 
+                          text={skill.category}
+                          speed={2}
+                          delay={4}
+                          offset={idx * 0.5}
+                          color="var(--text-dark)"
+                          shineColor="var(--primary)"
+                        />
+                      </span>
                     </div>
                     <div className={styles.skillTags}>
                       {skill.skills.map((tech, i) => (
@@ -138,7 +148,9 @@ export default function Skills() {
                     <div className={styles.iconWrapper}>
                       {skillsData.technical[8].icon}
                     </div>
-                    <span className={styles.categoryName}>{skillsData.technical[8].category}</span>
+                    <span className={styles.categoryName}>
+                      <ShinyText text={skillsData.technical[8].category} speed={2} delay={4} offset={0.5} color="var(--text-dark)" shineColor="var(--primary)" />
+                    </span>
                   </div>
                   <div className={styles.skillTags}>
                     {skillsData.technical[8].skills.map((tech, i) => (
@@ -153,7 +165,9 @@ export default function Skills() {
                     <div className={styles.iconWrapper}>
                       {skillsData.technical[5].icon}
                     </div>
-                    <span className={styles.categoryName}>{skillsData.technical[5].category}</span>
+                    <span className={styles.categoryName}>
+                      <ShinyText text={skillsData.technical[5].category} speed={2} delay={4} offset={1.0} color="var(--text-dark)" shineColor="var(--primary)" />
+                    </span>
                   </div>
                   <div className={styles.skillTags}>
                     {skillsData.technical[5].skills.map((tech, i) => (
@@ -168,7 +182,9 @@ export default function Skills() {
                     <div className={styles.iconWrapper}>
                       {skillsData.technical[6].icon}
                     </div>
-                    <span className={styles.categoryName}>{skillsData.technical[6].category}</span>
+                    <span className={styles.categoryName}>
+                      <ShinyText text={skillsData.technical[6].category} speed={2} delay={4} offset={1.5} color="var(--text-dark)" shineColor="var(--primary)" />
+                    </span>
                   </div>
                   <div className={styles.skillTags}>
                     {skillsData.technical[6].skills.map((tech, i) => (
@@ -183,7 +199,9 @@ export default function Skills() {
                     <div className={styles.iconWrapper}>
                       {skillsData.technical[7].icon}
                     </div>
-                    <span className={styles.categoryName}>{skillsData.technical[7].category}</span>
+                    <span className={styles.categoryName}>
+                      <ShinyText text={skillsData.technical[7].category} speed={2} delay={4} offset={2.0} color="var(--text-dark)" shineColor="var(--primary)" />
+                    </span>
                   </div>
                   <div className={styles.skillTags}>
                     {skillsData.technical[7].skills.map((tech, i) => (
@@ -198,7 +216,9 @@ export default function Skills() {
                     <div className={styles.iconWrapper}>
                       {skillsData.technical[4].icon}
                     </div>
-                    <span className={styles.categoryName}>{skillsData.technical[4].category}</span>
+                    <span className={styles.categoryName}>
+                      <ShinyText text={skillsData.technical[4].category} speed={2} delay={4} offset={2.5} color="var(--text-dark)" shineColor="var(--primary)" />
+                    </span>
                   </div>
                   <div className={styles.skillTags}>
                     {skillsData.technical[4].skills.map((tech, i) => (

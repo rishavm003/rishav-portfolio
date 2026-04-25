@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Projects.module.css';
-import { portfolioData } from '../../data/portfolioData';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { portfolioData } from '@/data/portfolioData';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Code, Github, ExternalLink } from 'lucide-react';
+import { ShinyText } from '@/components/ui';
 
 /* ─── Topic icons ──────────────────────────────────────────── */
 const ProjectIcon = ({ type, color }) => {
@@ -66,7 +67,17 @@ export default function Projects() {
               </div>
               
               <div className={styles.cardBody}>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <h3 className={styles.projectTitle}>
+                  <ShinyText 
+                    text={project.title}
+                    speed={1.5}
+                    delay={3}
+                    offset={(idx % 3) * 1.5}
+                    color="var(--text-dark)"
+                    shineColor={project.accent}
+                    pauseOnHover={true}
+                  />
+                </h3>
                 <div className={styles.descriptionWrapper}>
                   <p className={styles.projectDescription}>{project.description}</p>
                 </div>

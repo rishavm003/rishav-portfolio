@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './About.module.css';
-import { portfolioData } from '../../data/portfolioData';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { portfolioData } from '@/data/portfolioData';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { User, Database, Code, Blocks, GitBranch, Calendar, Award, Target } from 'lucide-react';
+import { ShinyText } from '@/components/ui';
 
 export default function About() {
   const [ref, isVisible] = useScrollReveal();
@@ -51,7 +52,16 @@ export default function About() {
                       <stat.icon size={20} />
                     </div>
                     <div className={styles.statInfo}>
-                      <div className={styles.statNumber}>{stat.number}</div>
+                      <div className={styles.statNumber}>
+                        <ShinyText 
+                          text={stat.number}
+                          speed={1.5}
+                          delay={3}
+                          offset={index * 0.5}
+                          color="var(--primary)"
+                          shineColor="#ffffff"
+                        />
+                      </div>
                       <div className={styles.statLabel}>{stat.label}</div>
                     </div>
                   </div>
