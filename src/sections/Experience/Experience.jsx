@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Experience.module.css';
-import { portfolioData } from '../../data/portfolioData';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { portfolioData } from '@/data/portfolioData';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Briefcase } from 'lucide-react';
+import { ShinyText } from '@/components/ui';
 
 export default function Experience() {
   const [ref, isVisible] = useScrollReveal();
@@ -33,7 +34,16 @@ export default function Experience() {
               <div className={styles.timelineContent}>
                 <div className={styles.jobHeading}>
                   <h3 className={styles.jobTitle}>
-                    {job.role} <span className={styles.company}>@ {job.company}</span>
+                    <ShinyText 
+                      text={job.role}
+                      speed={2}
+                      delay={4}
+                      offset={idx * 0.75}
+                      color="var(--text-dark)"
+                      shineColor="var(--primary)"
+                    />
+                    {' '}
+                    <span className={styles.company}>@ {job.company}</span>
                   </h3>
                   <p className={styles.metadata}>
                     {job.date} <span className={styles.separator}>|</span> {job.location}

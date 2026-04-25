@@ -1,6 +1,6 @@
 .skillsSection {
   padding: 100px 0;
-  background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color-light) 100%);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './CertificationsSection.module.css';
-import { certifications } from '../../data/portfolioData';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import styles from './Certifications.module.css';
+import { certifications } from '@/data/portfolioData';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Award, ExternalLink } from 'lucide-react';
 
 /* ─── Topic icons ──────────────────────────────────────────── */
@@ -28,7 +28,7 @@ function getIconForCert(title) {
 }
 
 /* ─── Section ──────────────────────────────────────────────── */
-export default function CertificationsSection() {
+export default function Certifications() {
   const [ref, isVisible] = useScrollReveal();
 
   return (

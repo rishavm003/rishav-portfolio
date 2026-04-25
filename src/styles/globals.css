@@ -15,7 +15,7 @@
   --accent-glow: rgba(244, 63, 94, 0.5);
   --accent-bright: #ff4d7d;
   
-  --secondary: #4338ca;
+  --secondary: #818cf8;
   
   --warm-amber: #f59e0b;
   --amber-glow: rgba(245, 158, 11, 0.5);
@@ -192,67 +192,6 @@ button {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-}
-
-/* Particle Background */
-.particle-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: float-up 10s infinite linear;
-}
-
-@keyframes float-up {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.3;
-  }
-  90% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(100px);
-    opacity: 0;
-  }
-}
-
-/* Grid Background */
-.grid-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(109, 75, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(109, 75, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: grid-move 20s linear infinite;
-  z-index: -1;
-  /* Smooth edges with mask */
-  mask-image: radial-gradient(ellipse at center, black 40%, transparent 90%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 90%);
-}
-
-@keyframes grid-move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
 }
 
 /* Glow Effects */

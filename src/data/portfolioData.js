@@ -69,7 +69,7 @@ export const portfolioData = {
       description: "A full-stack platform that transforms AI-generated content into natural, human-like text that bypasses detectors. Features a sleek glassmorphic UI, Groq LLM integration, and a secure credit-based system.",
       tags: ["Full Stack", "AI/LLM", "React", "Supabase", "Groq"],
       github: "https://github.com/rishavm003/HumanizeAI",
-      accent: "#8b5cf6",
+      accent: "#f43f5e",
       icon: "sparkles",
       floatDuration: "7.5s",
       floatDelay: "0.5s"
@@ -79,7 +79,7 @@ export const portfolioData = {
       description: "Intelligent triage system that uses AI to assess patient symptoms, prioritize cases by urgency, and recommend appropriate care pathways. Reduces wait times and improves hospital resource allocation.",
       tags: ["AI", "Healthcare", "NLP", "Python"],
       github: "https://github.com/rishavm003/AI-Powered-Healthcare-Triage-System",
-      accent: "#00d4ff",
+      accent: "#fbbf24",
       icon: "health",
       floatDuration: "6s",
       floatDelay: "0.4s"
@@ -99,7 +99,7 @@ export const portfolioData = {
       description: "AI-powered medical tool where users input multiple medications and instantly receive a safety report on dangerous drug interactions. Uses a medical knowledge base combined with NLP to explain risks in plain language.",
       tags: ["AI", "NLP", "Healthcare", "Python"],
       github: "https://github.com/rishavm003/Drug-Interaction-Checker",
-      accent: "#f43f5e",
+      accent: "#00d4ff",
       icon: "drug",
       floatDuration: "9s",
       floatDelay: "0.2s"
@@ -109,7 +109,7 @@ export const portfolioData = {
       description: "Scrapes financial news and social media, runs NLP-based sentiment analysis, and correlates public sentiment with real stock price movements. Visualized as an interactive analytics dashboard for investors.",
       tags: ["NLP", "Sentiment Analysis", "Finance", "Dashboard"],
       github: "https://github.com/rishavm003/Stock-Market-Sentiment-Analyzer",
-      accent: "#fbbf24",
+      accent: "#00ff88",
       icon: "sentiment",
       floatDuration: "7.5s",
       floatDelay: "2s"
@@ -119,7 +119,7 @@ export const portfolioData = {
       description: "Real-time emotion recognition system using CNN and OpenCV that detects 7 human emotions from live webcam feed — happy, sad, angry, surprised, fearful, disgusted, and neutral. Highly visual and impressive in live demos.",
       tags: ["Computer Vision", "CNN", "OpenCV", "Real-Time"],
       github: "https://github.com/rishavm003/Emotion-Detection-from-Facial-Expressions",
-      accent: "#ff4d8d",
+      accent: "#9d6fff",
       icon: "emotion",
       floatDuration: "5.5s",
       floatDelay: "0.8s"
@@ -129,7 +129,7 @@ export const portfolioData = {
       description: "End-to-end data analytics project on T20 World Cup cricket data. Analyzes player performance, team strategies, match outcomes, and batting/bowling statistics using Python and interactive visualizations.",
       tags: ["Data Analytics", "Python", "Sports Analytics"],
       github: "https://github.com/rishavm003/-T20-world-cup-cricket-data-analytics-",
-      accent: "#00ff88",
+      accent: "#fbbf24",
       icon: "cricket",
       floatDuration: "8.5s",
       floatDelay: "1.8s"
@@ -139,7 +139,7 @@ export const portfolioData = {
       description: "Comprehensive Power BI dashboard analyzing Blinkit's sales performance across item categories, outlet types, and key business metrics. Provides actionable insights for data-driven business decision-making.",
       tags: ["Power BI", "Data Analytics", "Dashboard"],
       github: "https://github.com/rishavm003/Blinkit-Sales-Analysis",
-      accent: "#fbbf24",
+      accent: "#6366f1",
       icon: "dashboard",
       floatDuration: "5s",
       floatDelay: "2.5s"
@@ -149,7 +149,7 @@ export const portfolioData = {
       description: "Advanced Python-based automation bot that manages GitHub workflows daily. Features automated commits, scans issues using Gemini AI to generate intelligent draft replies, and produces detailed daily performance reports.",
       tags: ["Python", "Gemini AI", "Automation", "GitHub Actions"],
       github: "https://github.com/rishavm003/Github-Automation",
-      accent: "#6366f1",
+      accent: "#f43f5e",
       icon: "automation",
       floatDuration: "7s",
       floatDelay: "0.2s"
@@ -159,7 +159,7 @@ export const portfolioData = {
       description: "Generative AI application that creates personalized interior room layouts based on user preferences. Users input their style, budget, and room dimensions — the AI generates design recommendations and furniture arrangements.",
       tags: ["Generative AI", "UX", "HTML", "CSS"],
       github: "https://github.com/rishavm003/AI-Room-Design",
-      accent: "#9d6fff",
+      accent: "#00ff88",
       icon: "room",
       floatDuration: "7s",
       floatDelay: "1s"
