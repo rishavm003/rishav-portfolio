@@ -177,6 +177,20 @@ export const portfolioData = {
   ],
   experience: [
     {
+      role: "Junior Research Assistant",
+      company: "Vandhana International",
+      date: "June 2026 – Present",
+      location: "",
+      points: [
+        "Analyzing time-series sensor data from Track Recording Cars (TRC) and track maintenance machines using Python, Advanced Excel, and Power BI.",
+        "Processing track geometry parameters (gauge, cross-level, twist, alignment) to monitor Track Quality Index (TQI) trends and identify degradation patterns.",
+        "Building interactive dashboards to communicate analytical insights to technical stakeholders.",
+        "Supporting predictive modeling and forecasting for condition-based track maintenance using statistical and ML techniques.",
+        "Contributing to research publications, technical reports, and grant documentation under senior researcher guidance.",
+        "Coordinating field surveys across Indian Railways and Metro Rail test sites for data collection and site inspections."
+      ]
+    },
+    {
       role: "WBL Intern",
       company: "NIELIT",
       date: "August 2025 – Present",
