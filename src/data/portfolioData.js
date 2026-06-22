@@ -8,9 +8,9 @@ export const portfolioData = {
   },
   about: {
     bio: [
-      "I got into AI because I wanted to build things that actually think. Not rule-based scripts — real systems that reason, adapt, and solve hard problems. That curiosity turned into a CS degree specializing in AI, and a habit of building things before fully knowing how.",
-      "I've shipped a brain tumor detection system using deep learning, an AI that converts documents into explainer videos, and a room design assistant that generates interior layouts from user preferences. My stack is Python, PyTorch, JavaScript, and SQL — and I work across the full pipeline from model training to the final product.",
-      "Outside projects, I interned at Hindalco Industries where I got my first taste of real-world software at scale. I volunteered at Khelo India University Games 2022 — which, honestly, taught me more about staying calm under pressure than any exam did. Currently going deep on DSA, NLP, and intelligent automation."
+      "I got into AI because constrained hardware forced me to think harder. When you can't throw compute at a problem, you learn what actually matters. That mindset shaped my CS degree in AI and a research paper benchmarking quantized LLMs on a GTX 1650 — because real-world deployment rarely happens on a server farm.",
+      "I've built across the full AI stack — a local ad generation pipeline using Stable Diffusion + MoviePy, a meeting analyzer Chrome extension with Gemini 1.5 Pro, an English communication trainer with real-time speech scoring, and a Bhagavad Gita AI with custom QLoRA fine-tuning. My stack is Python, PyTorch, React, and whatever the problem actually needs.",
+      "Currently a Junior Research Assistant at VIPL, New Delhi, working on Rail-Wheel Interaction research and data dashboarding — my first role outside pure software, which is exactly why I took it. I'm drawn to problems at the edge of domains, where CS thinking hasn't fully landed yet."
     ],
   },
   skills: {
